@@ -37,10 +37,10 @@ const Contact = () => {
               <div>
                 <h3 className="font-heading font-bold mb-1">Email</h3>
                 <a 
-                  href="mailto:your.email@example.com"
+                  href="mailto:dnyaneshadkar@gmail.com"
                   className="text-muted-foreground hover:text-primary transition-colors"
                 >
-                  your.email@example.com
+                  dnyaneshadkar@gmail.com
                 </a>
               </div>
             </div>
@@ -51,7 +51,7 @@ const Contact = () => {
               </div>
               <div>
                 <h3 className="font-heading font-bold mb-1">Location</h3>
-                <p className="text-muted-foreground">Your City, Country</p>
+                <p className="text-muted-foreground">Pune, India</p>
               </div>
             </div>
           </div>
@@ -60,6 +60,7 @@ const Contact = () => {
             <Button 
               size="lg" 
               className="bg-primary hover:bg-primary/90 text-primary-foreground glow flex items-center gap-2"
+              onClick={() => window.location.href = 'mailto:dnyaneshadkar@gmail.com'}
             >
               <Mail className="w-5 h-5" />
               Send Email
@@ -68,6 +69,7 @@ const Contact = () => {
               size="lg" 
               variant="secondary"
               className="flex items-center gap-2"
+              onClick={() => window.open('https://github.com/Dnyaneshadkar9696', '_blank')}
             >
               <Github className="w-5 h-5" />
               GitHub
@@ -76,6 +78,7 @@ const Contact = () => {
               size="lg" 
               variant="secondary"
               className="flex items-center gap-2"
+              onClick={() => window.open('https://linkedin.com/in/dnyaneshadkar96', '_blank')}
             >
               <Linkedin className="w-5 h-5" />
               LinkedIn

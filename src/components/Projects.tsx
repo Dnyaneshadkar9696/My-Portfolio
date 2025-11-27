@@ -6,31 +6,10 @@ import { ExternalLink, Github } from "lucide-react";
 const Projects = () => {
   const projects = [
     {
-      title: "Smart Home Automation",
-      description: "IoT-based home automation system using ESP32 and React Native mobile app for control",
-      tags: ["IoT", "React Native", "ESP32", "Firebase"],
-      github: "#",
-      demo: "#"
-    },
-    {
-      title: "AI Task Manager",
-      description: "Full-stack web application with AI-powered task prioritization and scheduling",
-      tags: ["React", "Node.js", "PostgreSQL", "OpenAI"],
-      github: "#",
-      demo: "#"
-    },
-    {
-      title: "RISC-V Processor",
-      description: "Custom RISC-V processor implementation in Verilog with instruction set simulator",
-      tags: ["Verilog", "Computer Architecture", "Assembly"],
-      github: "#",
-      demo: "#"
-    },
-    {
-      title: "Real-time Chat App",
-      description: "WebSocket-based real-time messaging application with end-to-end encryption",
-      tags: ["TypeScript", "Socket.io", "React", "Express"],
-      github: "#",
+      title: "Animal Quiz",
+      description: "Developed an interactive quiz app to help users learn about different animals through engaging multiple-choice questions and score tracking",
+      tags: ["Java", "JavaFX", "MySQL"],
+      github: "https://github.com/Dnyaneshadkar9696",
       demo: "#"
     }
   ];
@@ -49,11 +28,11 @@ const Projects = () => {
             Featured <span className="text-gradient">Projects</span>
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            A showcase of my recent work spanning web development, IoT, and computer architecture
+            Building practical solutions that combine technical skills with creative problem-solving
           </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 gap-6">
+        <div className="grid md:grid-cols-1 gap-6 max-w-2xl mx-auto">
           {projects.map((project, index) => (
             <motion.div
               key={index}
@@ -80,13 +59,14 @@ const Projects = () => {
                   ))}
                 </div>
                 <div className="flex gap-3">
-                  <Button variant="secondary" size="sm" className="flex items-center gap-2">
+                  <Button 
+                    variant="secondary" 
+                    size="sm" 
+                    className="flex items-center gap-2"
+                    onClick={() => window.open(project.github, '_blank')}
+                  >
                     <Github className="w-4 h-4" />
-                    Code
-                  </Button>
-                  <Button size="sm" className="flex items-center gap-2 bg-primary hover:bg-primary/90">
-                    <ExternalLink className="w-4 h-4" />
-                    Demo
+                    View on GitHub
                   </Button>
                 </div>
               </Card>
