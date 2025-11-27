@@ -7,17 +7,17 @@ const About = () => {
     {
       icon: GraduationCap,
       title: "Education",
-      description: "Pursuing Computer Engineering with focus on software development and embedded systems"
+      description: "BTech in Computer Engineering from D Y Patil College, graduating in 2026 with strong foundation in software development"
     },
     {
       icon: Code,
       title: "Development",
-      description: "Experience in full-stack development, building scalable and efficient applications"
+      description: "Proficient in Java, Python, C, and C++, with experience in building interactive applications and efficient algorithms"
     },
     {
       icon: Cpu,
-      title: "Hardware",
-      description: "Knowledge in digital design, microprocessors, and hardware-software integration"
+      title: "Problem Solving",
+      description: "Analytical mindset with passion for data analysis and turning ideas into practical, impactful solutions"
     }
   ];
 
@@ -35,8 +35,8 @@ const About = () => {
             About <span className="text-gradient">Me</span>
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            A dedicated computer engineering student with a passion for creating innovative solutions
-            and pushing the boundaries of technology.
+            Final-year Computer Engineering student at D Y Patil College of Engineering and Technology, Ambi, graduating in 2026.
+            Passionate about turning code into impactful solutions and solving real-world problems.
           </p>
         </motion.div>
 
@@ -66,9 +66,9 @@ const About = () => {
           className="text-center"
         >
           <p className="text-lg text-foreground leading-relaxed max-w-3xl mx-auto">
-            I'm constantly learning and exploring new technologies, from web development and mobile apps
-            to embedded systems and IoT devices. My goal is to leverage my skills to create meaningful
-            solutions that make a positive impact.
+            My coding journey began with Java, Python, C, and C++, enabling me to approach problems from multiple angles. 
+            My academic experience has equipped me with technical knowledge and instilled a pragmatic approach to problem-solving. 
+            I'm eager to apply my skills, collaborate with teams, and contribute to meaningful projects that make a difference.
           </p>
         </motion.div>
       </div>

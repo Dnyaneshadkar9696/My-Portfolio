@@ -30,7 +30,7 @@ const Hero = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
-            Hi, I'm <span className="text-gradient">Your Name</span>
+            Hi, I'm <span className="text-gradient">Dnyanesh Adkar</span>
           </motion.h1>
           
           <motion.p 
@@ -39,7 +39,7 @@ const Hero = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
           >
-            Computer Engineering Student | Software Developer | Tech Enthusiast
+            Computer Engineer | Problem Solver | Tech Enthusiast
           </motion.p>
 
           <motion.p 
@@ -48,8 +48,7 @@ const Hero = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.6 }}
           >
-            Passionate about building innovative solutions at the intersection of hardware and software.
-            Exploring cutting-edge technologies and creating impactful projects.
+            Passionate about turning code into impactful solutions. Driven by curiosity and a keen interest in crafting efficient algorithms, I aim to push the envelope and deliver software that makes a difference.
           </motion.p>
 
           <motion.div 
@@ -58,10 +57,18 @@ const Hero = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.8 }}
           >
-            <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground glow">
+            <Button 
+              size="lg" 
+              className="bg-primary hover:bg-primary/90 text-primary-foreground glow"
+              onClick={() => document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' })}
+            >
               View Projects
             </Button>
-            <Button size="lg" variant="secondary">
+            <Button 
+              size="lg" 
+              variant="secondary"
+              onClick={() => window.open('/Dnyanesh_Adkar_Resume.pdf', '_blank')}
+            >
               Download Resume
             </Button>
           </motion.div>
@@ -73,7 +80,7 @@ const Hero = () => {
             transition={{ duration: 0.8, delay: 1 }}
           >
             <a 
-              href="https://github.com" 
+              href="https://github.com/Dnyaneshadkar9696" 
               target="_blank" 
               rel="noopener noreferrer"
               className="p-3 rounded-lg bg-secondary hover:bg-secondary/80 transition-colors"
@@ -81,7 +88,7 @@ const Hero = () => {
               <Github className="w-6 h-6" />
             </a>
             <a 
-              href="https://linkedin.com" 
+              href="https://linkedin.com/in/dnyaneshadkar96" 
               target="_blank" 
               rel="noopener noreferrer"
               className="p-3 rounded-lg bg-secondary hover:bg-secondary/80 transition-colors"
@@ -89,7 +96,7 @@ const Hero = () => {
               <Linkedin className="w-6 h-6" />
             </a>
             <a 
-              href="mailto:your.email@example.com"
+              href="mailto:dnyaneshadkar@gmail.com"
               className="p-3 rounded-lg bg-secondary hover:bg-secondary/80 transition-colors"
             >
               <Mail className="w-6 h-6" />
