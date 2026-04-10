@@ -2,71 +2,95 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
+/* Brittany Chiang Color System - Production Ready */
 
 @layer base {
   :root {
-    --background: 220 26% 8%;
-    --foreground: 210 40% 98%;
+    /* Background Colors */
+    --background: 217 76% 12%;        /* #0a192f - Primary background */
+    --background-dark: 216 62% 5%;    /* #020c1b - Secondary background */
+    --card: 216 50% 15%;              /* #112240 - Card background */
+    
+    /* Text Colors */
+    --foreground: 217 66% 90%;        /* #ccd6f6 - Primary text */
+    --text-secondary: 217 18% 65%;    /* #8892b0 - Secondary text */
+    
+    /* Accent Color */
+    --primary: 178 100% 50%;          /* #64ffda - Neon mint */
+    --primary-foreground: 217 76% 12%;
 
-    --card: 220 20% 12%;
-    --card-foreground: 210 40% 98%;
+    --secondary: 216 50% 15%;
+    --secondary-foreground: 217 66% 90%;
 
-    --popover: 220 20% 12%;
-    --popover-foreground: 210 40% 98%;
+    --muted: 216 20% 25%;
+    --muted-foreground: 217 18% 65%;
 
-    --primary: 189 95% 51%;
-    --primary-foreground: 220 26% 8%;
+    --accent: 178 100% 50%;           /* #64ffda */
+    --accent-foreground: 217 76% 12%;
 
-    --secondary: 220 20% 18%;
-    --secondary-foreground: 210 40% 98%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 217 66% 90%;
 
-    --muted: 220 15% 20%;
-    --muted-foreground: 210 15% 65%;
+    --border: 216 30% 20%;
+    --input: 216 30% 20%;
+    --ring: 178 100% 50%;
 
-    --accent: 189 95% 51%;
-    --accent-foreground: 220 26% 8%;
+    --radius: 0.5rem;
 
-    --destructive: 0 72% 51%;
-    --destructive-foreground: 210 40% 98%;
+    /* Gradients & Shadows */
+    --gradient-primary: linear-gradient(135deg, hsl(178 100% 50%) 0%, hsl(188 95% 48%) 100%);
+    --gradient-secondary: linear-gradient(135deg, hsl(217 76% 12%) 0%, hsl(216 50% 15%) 100%);
+    --glow-primary: 0 0 30px hsl(178 100% 50% / 0.25);
+    --shadow-elevated: 0 20px 40px -12px hsl(178 100% 50% / 0.2);
+    --shadow-card: 0 10px 30px -10px hsl(178 100% 50% / 0.1);
 
-    --border: 220 15% 22%;
-    --input: 220 15% 22%;
-    --ring: 189 95% 51%;
-
-    --radius: 0.75rem;
-
-    --gradient-primary: linear-gradient(135deg, hsl(189 95% 51%) 0%, hsl(199 89% 48%) 100%);
-    --gradient-secondary: linear-gradient(135deg, hsl(220 26% 8%) 0%, hsl(220 20% 12%) 100%);
-    --glow-primary: 0 0 40px hsl(189 95% 51% / 0.3);
-    --shadow-elevated: 0 20px 40px -12px hsl(189 95% 51% / 0.15);
-
-    --sidebar-background: 220 20% 12%;
-    --sidebar-foreground: 210 40% 98%;
-    --sidebar-primary: 189 95% 51%;
-    --sidebar-primary-foreground: 220 26% 8%;
-    --sidebar-accent: 220 20% 18%;
-    --sidebar-accent-foreground: 210 40% 98%;
-    --sidebar-border: 220 15% 22%;
-    --sidebar-ring: 189 95% 51%;
+    /* Sidebar */
+    --sidebar-background: 216 50% 15%;
+    --sidebar-foreground: 217 66% 90%;
+    --sidebar-primary: 178 100% 50%;
+    --sidebar-primary-foreground: 217 76% 12%;
+    --sidebar-accent: 216 50% 15%;
+    --sidebar-border: 216 30% 20%;
+    --sidebar-ring: 178 100% 50%;
   }
-}
 
-@layer base {
   * {
-    @apply border-border;
+    @apply scroll-smooth;
   }
 
   body {
     @apply bg-background text-foreground;
-    font-family: 'Manrope', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    font-feature-settings: "rlig" 1, "calt" 1;
   }
 
-  h1, h2, h3, h4, h5, h6 {
-    font-family: 'Sora', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-    font-weight: 700;
+  a {
+    @apply text-foreground transition-colors duration-300 hover:text-primary;
+  }
+
+  button {
+    @apply transition-all duration-300;
+  }
+}
+
+@layer components {
+  .text-secondary {
+    @apply text-muted-foreground;
+  }
+
+  .gradient-text {
+    @apply text-gradient;
+  }
+
+  .nav-link {
+    @apply text-text-secondary hover:text-primary transition-colors duration-300;
+  }
+
+  .card-hover {
+    @apply transition-all duration-300 hover:shadow-elevated hover:-translate-y-2;
+  }
+
+  .glow-on-hover {
+    @apply hover:shadow-lg hover:shadow-primary/40 transition-all duration-300;
   }
 }
 
@@ -84,5 +108,19 @@ All colors MUST be HSL.
 
   .card-elevated {
     box-shadow: var(--shadow-elevated);
+  }
+
+  /* Hover Highlight Effect - Reusable for all list items */
+  .hover-highlight {
+    @apply relative rounded-lg p-6 transition-all duration-300 ease-in-out;
+    background-color: transparent;
+    border: 1px solid transparent;
+  }
+
+  .hover-highlight:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+    border-color: rgba(255, 255, 255, 0.1);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
   }
 }

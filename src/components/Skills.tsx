@@ -3,20 +3,20 @@ import { motion } from "framer-motion";
 const Skills = () => {
   const skillCategories = [
     {
-      category: "Programming Languages",
-      skills: ["Java", "Python", "C", "C++"]
+      category: "Frontend",
+      skills: ["HTML", "CSS", "JavaScript", "Bootstrap"]
     },
     {
-      category: "Web Development",
-      skills: ["HTML", "CSS", "JavaScript", "JavaFX"]
+      category: "Backend",
+      skills: ["Core Java", "OOP", "Collections Framework", "JDBC", "JSP", "Servlets", "Hibernate", "JPA", "Spring", "Spring Boot", "REST API"]
     },
     {
       category: "Database",
-      skills: ["MySQL"]
+      skills: ["MySQL", "SQL"]
     },
     {
-      category: "Soft Skills",
-      skills: ["Communication", "Problem Solving", "Analytical Thinking", "Critical Thinking"]
+      category: "Tools",
+      skills: ["Maven", "Spring Tool Suite", "MySQL Workbench"]
     }
   ];
 
@@ -28,14 +28,11 @@ const Skills = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
-          className="text-center mb-16"
+          className="mb-16"
         >
           <h2 className="font-heading text-4xl md:text-5xl font-bold mb-4">
-            Skills & <span className="text-gradient">Technologies</span>
+            <span className="text-gradient">Skills</span>
           </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            A comprehensive toolkit for building modern software and hardware solutions
-          </p>
         </motion.div>
 
         <div className="grid md:grid-cols-2 gap-8">
@@ -46,7 +43,7 @@ const Skills = () => {
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
               viewport={{ once: true }}
-              className="bg-card p-6 rounded-xl border border-border"
+              className="hover-highlight bg-card border-border"
             >
               <h3 className="font-heading text-xl font-bold mb-4 text-primary">
                 {category.category}

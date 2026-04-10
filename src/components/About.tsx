@@ -1,75 +1,46 @@
 import { motion } from "framer-motion";
-import { Card } from "./ui/card";
-import { GraduationCap, Code, Cpu } from "lucide-react";
 
 const About = () => {
-  const highlights = [
-    {
-      icon: GraduationCap,
-      title: "Education",
-      description: "BTech in Computer Engineering from D Y Patil College, graduating in 2026 with strong foundation in software development"
-    },
-    {
-      icon: Code,
-      title: "Development",
-      description: "Proficient in Java, Python, C, and C++, with experience in building interactive applications and efficient algorithms"
-    },
-    {
-      icon: Cpu,
-      title: "Problem Solving",
-      description: "Analytical mindset with passion for data analysis and turning ideas into practical, impactful solutions"
-    }
-  ];
-
   return (
-    <section id="about" className="py-20 px-6">
+    <section id="about" className="pt-32 pb-24 px-6 bg-background">
       <div className="container mx-auto max-w-6xl">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
-          className="text-center mb-16"
+          className="mb-8"
         >
-          <h2 className="font-heading text-4xl md:text-5xl font-bold mb-4">
-            About <span className="text-gradient">Me</span>
+          <h2 className="font-heading text-5xl md:text-6xl font-bold mb-8">
+            <span className="text-gradient">About Me</span>
           </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Final-year Computer Engineering student at D Y Patil College of Engineering and Technology, Ambi, graduating in 2026.
-            Passionate about turning code into impactful solutions and solving real-world problems.
-          </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-3 gap-6 mb-12">
-          {highlights.map((item, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
-              viewport={{ once: true }}
-            >
-              <Card className="p-6 bg-card hover:bg-secondary/50 transition-colors border-border card-elevated h-full">
-                <item.icon className="w-12 h-12 text-primary mb-4" />
-                <h3 className="font-heading text-xl font-bold mb-2">{item.title}</h3>
-                <p className="text-muted-foreground">{item.description}</p>
-              </Card>
-            </motion.div>
-          ))}
-        </div>
-
+        {/* Main Description */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.3 }}
+          transition={{ duration: 0.6, delay: 0.1 }}
           viewport={{ once: true }}
-          className="text-center"
+          className="mb-16 max-w-4xl"
         >
-          <p className="text-lg text-foreground leading-relaxed max-w-3xl mx-auto">
-            My coding journey began with Java, Python, C, and C++, enabling me to approach problems from multiple angles. 
-            My academic experience has equipped me with technical knowledge and instilled a pragmatic approach to problem-solving. 
-            I'm eager to apply my skills, collaborate with teams, and contribute to meaningful projects that make a difference.
-          </p>
+          <div className="space-y-6 text-lg leading-relaxed">
+            <p className="text-foreground">
+              I'm a <span className="text-foreground font-bold">Java Full Stack Developer</span> with a strong passion for building clean, responsive, and user-friendly web applications. I enjoy turning ideas into real-world digital experiences, with a focus on writing scalable code and creating interfaces that are both functional and visually appealing.
+            </p>
+            
+            <p className="text-muted-foreground">
+              I take pride in paying attention to detail and continuously improving the user experience through thoughtful design and efficient implementation. My work combines development and design, allowing me to build applications that are both technically strong and easy to use.
+            </p>
+            
+            <p className="text-muted-foreground">
+              Currently, I am focused on strengthening my skills in full-stack development, working with technologies like <span className="text-foreground font-bold">Java</span>, <span className="text-foreground font-bold">Spring Boot</span>, and modern frontend tools. I enjoy building projects that solve real-world problems and help me grow as a developer.
+            </p>
+
+            <p className="text-muted-foreground">
+              Beyond coding, I actively explore new technologies, improve my problem-solving skills, and work on projects that enhance my portfolio. I am always eager to learn, collaborate, and contribute to building impactful digital solutions.
+            </p>
+          </div>
         </motion.div>
       </div>
     </section>

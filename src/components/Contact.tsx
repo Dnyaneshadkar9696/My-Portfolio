@@ -5,13 +5,13 @@ import { Mail, Github, Linkedin, MapPin } from "lucide-react";
 const Contact = () => {
   return (
     <section id="contact" className="py-20 px-6 bg-secondary/20">
-      <div className="container mx-auto max-w-4xl">
+      <div className="container mx-auto max-w-6xl">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
-          className="text-center mb-12"
+          className="mb-12"
         >
           <h2 className="font-heading text-4xl md:text-5xl font-bold mb-4">
             Get In <span className="text-gradient">Touch</span>
